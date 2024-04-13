@@ -32,7 +32,9 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <h2>Installation Steps</h2>
 
 <p>
-<img src="![Azure Portal](https://github.com/Onstarva/osticket-prereqs/assets/166679644/42a7997c-be47-437a-abd6-18a115ac8719)
+  ![Azure Portal](https://github.com/Onstarva/osticket-prereqs/assets/166679644/bc4c8a26-ad4a-4905-834c-ef37299713f4)
+
+<img src="
  "/>
 </p>
 <p>
