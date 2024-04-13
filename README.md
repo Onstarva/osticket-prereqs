@@ -32,10 +32,8 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 <h2>Installation Steps</h2>
 
 <p>
-  ![Azure Portal](https://github.com/Onstarva/osticket-prereqs/assets/166679644/bc4c8a26-ad4a-4905-834c-ef37299713f4)
 
-<img src="
- "/>
+<img src="![Azure Portal](https://github.com/Onstarva/osticket-prereqs/assets/166679644/82ef80ef-4389-4588-ac37-90e8407ce071)"/>
 </p>
 <p>
 First you need to have an account and active subscription on Microsoft Azure. Once you've made an account and subscription with Microsoft Azure. You will want to go to [Azure ](https://portal.azure.com/#home). You should see at the top a few selection choices. Click Vitual Machine tab and hit "create Virtual Machine". 
