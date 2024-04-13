@@ -10,7 +10,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
-- Internet Information Services (IIS)
+- Internet Information Services (IIS) and CGI
 
 <h2>Operating Systems Used </h2>
 
@@ -23,17 +23,18 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 - Item 2
   Create a Resource Group
 - Item 3
-  Creat a Virtual Network
+  Create a Virtual Network
 - Item 4
-  Creat a Subnet
+  Create a Subnet
 - Item 5
-  Create two Virtual Machines (VMs)
+  Create a Virtual Machines (VMs)
   
 <h2>Installation Steps</h2>
 
 <p>
 
-<img src="![Azure Portal](https://github.com/Onstarva/osticket-prereqs/assets/166679644/82ef80ef-4389-4588-ac37-90e8407ce071)"/>
+![Azure Portal](https://github.com/Onstarva/osticket-prereqs/assets/166679644/78a53463-24df-4809-86c3-547a889d4d7d)
+
 </p>
 <p>
 First you need to have an account and active subscription on Microsoft Azure. Once you've made an account and subscription with Microsoft Azure. You will want to go to [Azure ](https://portal.azure.com/#home). You should see at the top a few selection choices. Click Vitual Machine tab and hit "create Virtual Machine". 
@@ -41,17 +42,26 @@ First you need to have an account and active subscription on Microsoft Azure. On
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![VM Setup](https://github.com/Onstarva/osticket-prereqs/assets/166679644/ccc232c7-e768-48d5-ab8a-ff9d091afe2e)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
+In Virtual Machine setup. You will first pick your active subscription. Under that create a Resource Group name. Create a Vitual Machine name, pick a region of your choice, Zone of your choose and Image to Windows 10 or 11. For Size, this effects the speed and preformance of your VM so pick accordingly. Create a Username and Password, important to remember these. Then click Review + Create. If all go well everything should be validated and hit Create. You may need to adjust Regions if all Region options are greyed out. At this point, you've created an Resource Group, Virtual Network, subnet and as they're created with the VM. It's important to note that the Size of your VM should be at least 2 vcpu if your running more than one VM at time.
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+![VM Logged in](https://github.com/Onstarva/osticket-prereqs/assets/166679644/b7acbc60-d695-46d8-99e1-232a007836c2)
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Go to the VM tab when both VMs are running. Click one VM and copy the Public IP Address. Next go to windows, accessories, Remote Desktop Connection and click it. Paste the copied IP Address and login to your VM with the Username and Password you've created. Hit yes to connect. A windows startup screen will appear similar to starting your original PC. Wait for everything to set it's self up. You should now be on default windows pc screen.
 </p>
 <br />
+
+</p>
+
+![IIS with CGI](https://github.com/Onstarva/osticket-prereqs/assets/166679644/ac2904af-9ad8-41dc-85e1-b3c249fe1304)
+
+Now we need to setup the IIS (Internet Information Services) to run TicketOs. In your VM you logged into. Go to Windows, Settings, Apps, Programs, Turn Windows Features on or off. When the menu is open, click the box Internet Information Services, expand World Wide Web Services, expand Application Development Features, Checkmark CGI. Next go to Common HTTP Features, Checkmark all of the folder boxes from Default Documents to WebDAV Publishing. Hit OK and it will begin installing IIS with CGI for OSTicket.
