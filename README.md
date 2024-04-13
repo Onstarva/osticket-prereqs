@@ -47,7 +47,7 @@ First you need to have an account and active subscription on Microsoft Azure. On
 
 </p>
 <p>
-In Virtual Machine setup. You will first pick your active subscription. Under that create a Resource Group name. Create a Vitual Machine name, pick a region of your choice, Zone of your choose and Image to Windows 10 or 11. For Size, this effects the speed and preformance of your VM so pick accordingly. Create a Username and Password, important to remember these. Then click Review + Create. If all go well everything should be validated and hit Create. You may need to adjust Regions if all Region options are greyed out. At this point, you've created an Resource Group, Virtual Network, subnet and as they're created with the VM. It's important to note that the Size of your VM should be at least 2 vcpu if your running more than one VM at time.
+In Virtual Machine setup. You will first pick your active subscription. Under that create a Resource Group name. Create a Vitual Machine name, pick a region of your choice, Zone of your choose and Image to Windows 10 or 11. For Size, this effects the speed and preformance of your VM so pick accordingly. Create a Username and Password, important to remember these. Then click Review + Create. If all go well everything should be validated and hit Create. You may need to adjust Regions if all Region options are greyed out. At this point, you've created an Resource Group, Virtual Network, subnet and as they're created with the VM. It's important to note that the Size of your VM should be at least 2 vcpu if your running more than one VM at a time.
 <br />
 
 <p>
