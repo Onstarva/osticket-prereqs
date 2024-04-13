@@ -18,15 +18,15 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>List of Prerequisites</h2>
 
-- Item 1
+- Item 1:
   Have an active account and subscription to Microsoft Azure (Free subscriptions are valid)
-- Item 2
+- Item 2:
   Create a Resource Group
-- Item 3
+- Item 3:
   Create a Virtual Network
-- Item 4
+- Item 4:
   Create a Subnet
-- Item 5
+- Item 5:
   Create a Virtual Machines (VMs)
   
 <h2>Installation Steps</h2>
