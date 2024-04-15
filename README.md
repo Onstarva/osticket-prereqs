@@ -37,7 +37,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 </p>
 <p>
-First you need to have an account and active subscription on Microsoft Azure. Once you've made an account and subscription with Microsoft Azure. You will want to go to [Azure ](https://portal.azure.com/#home). You should see at the top a few selection choices. Click Vitual Machine tab and hit "create Virtual Machine". 
+First you need to have an account and active subscription on Microsoft Azure. Once you've made an account and subscription with Microsoft Azure. You will want to go to https://portal.azure.com/#home. You should see at the top a few selection choices. Click Vitual Machine tab and hit "create Virtual Machine". 
 </p>
 <br />
 
@@ -64,4 +64,22 @@ Go to the VM tab when both VMs are running. Click one VM and copy the Public IP 
 
 ![IIS with CGI](https://github.com/Onstarva/osticket-prereqs/assets/166679644/ac2904af-9ad8-41dc-85e1-b3c249fe1304)
 
-Now we need to setup the IIS (Internet Information Services) to run TicketOs. In your VM you logged into. Go to Windows, Settings, Apps, Programs, Turn Windows Features on or off. When the menu is open, click the box Internet Information Services, expand World Wide Web Services, expand Application Development Features, Checkmark CGI. Next go to Common HTTP Features, Checkmark all of the folder boxes from Default Documents to WebDAV Publishing. Hit OK and it will begin installing IIS with CGI for OSTicket.
+Now we need to setup the IIS (Internet Information Services) to run TicketOs. In your VM you logged into. Go to Windows, Settings, Apps, Programs, Turn Windows Features on or off. When the menu is open, click the box Internet Information Services, expand World Wide Web Services, expand Application Development Features, Checkmark CGI. Next go to Common HTTP Features, Checkmark all of the folder boxes from Default Documents to WebDAV Publishing. Hit OK and it will begin installing IIS with CGI.
+
+</p>
+
+![Folder Installation](https://github.com/Onstarva/osticket-prereqs/assets/166679644/cd03cdfe-29f4-467d-925b-b32ab9098518)
+
+Next you will be installing the file for OsTicket from this directory, https://drive.google.com/drive/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6. First download and install PHP Manager for IIS and Rewrite Module. Create a folder in C drive named PHP. Continue to download and install PHP-7.3.8 zip, VC_redist and MySql from the installation folder. For Mysql hit Typical Setup, launch config (after setup), standard config and password of your choosing. Extract PHP zip into the C/PHP folder you created.
+
+</p>
+
+![IIS config](https://github.com/Onstarva/osticket-prereqs/assets/166679644/b137587e-dc1e-4f32-82c4-b6b1ff34c318)
+
+In the bottom search window type IIS and open IIS as Admin. Now register PHP from within IIS by going to PHP Manager, Register New PHP version, find your C:\PHP and clicking PHP-cgi.exe. Close and reopen IIS as Admin. Now download and install osTicket from the file directory. Extract the files into c:\inetput\wwwroot. Within c:\inetpub\wwwroot, rename "upload" to osTicket. Restart IIS again. Go to PHP Manager, click "Enable or disable an extension". Enable php_imap, php_intl.dll, and php_opcache.dll. From: C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php, rename "ost-sampleconfig.php" to ost-config.php.
+Right click ost-config-> properties-> security-> advanced-> disable inheritance and remove all inheritance. Click apply and okay. Click advanced and Add new Select principals. Type "Everyone" in text space and hit ok. Now check Full control and hit ok. Apply and ok.
+</p>
+
+![osTicket installed](https://github.com/Onstarva/osticket-prereqs/assets/166679644/ab55d6b3-c639-4790-89de-e21a601dc2b7)
+
+In PHP Manager left-hand tab, left click osTicket. Go to the right-hand side of PHP Manager and open "Browser *80(http)" and hit continue. Now fill out the Help Desk name, email and passwords of your choosing. Next download and install HeidiSQL from your file installation directory from before. Open HeidiSQL and in the left tab. Hit new session, enter a username and password. Hit open, right click "unnamed"->create new-> Database-> name the database and hit ok. Now go back to the web browser you were in and enter the username, password and database you created in HeidiSQL and hit install now. Now you can click the URLs to login as an Administrator or an End user.
