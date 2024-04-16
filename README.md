@@ -28,6 +28,8 @@ This tutorial outlines the prerequisites and installation of the open-source hel
   Create a Subnet
 - Item 5:
   Create a Virtual Machines (VMs)
+- Item 6:
+  https://drive.google.com/drive/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6
   
 <h2>Installation Steps</h2>
 
